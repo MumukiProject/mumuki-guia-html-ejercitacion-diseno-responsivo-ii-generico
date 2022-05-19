@@ -1,0 +1,14 @@
+---
+expectations:
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: css:.imagenes
+  inspection: DeclaresStyle:margin:12px
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: 'css:@media_start(max-width: 900px)@media_end:.imagenes'
+  inspection: DeclaresStyle:grid-template-columns:repeat(3,1fr)
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: 'css:@media_start(max-width: 700px)@media_end:.imagenes'
+  inspection: DeclaresStyle:grid-template-columns:repeat(2,1fr)
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: 'css:@media_start(max-width: 500px)@media_end:.imagenes'
+  inspection: DeclaresStyle:grid-template-columns:1fr

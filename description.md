@@ -1,0 +1,1 @@
+A lo largo de esta lección utilizaremos breakpoints para que nuestro html responda a distintos tamaños de pantalla. :raised_hands:

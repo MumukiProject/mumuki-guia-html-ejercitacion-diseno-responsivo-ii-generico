@@ -1,0 +1,20 @@
+---
+expectations:
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: "*"
+  inspection: DeclaresTag:h1
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: "*"
+  inspection: DeclaresTag:section
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: "*"
+  inspection: DeclaresTag:h2
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: "*"
+  inspection: DeclaresTag:h3
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: 'css:@media_start(max-width: 1000px)@media_end:*'
+  inspection: DeclaresStyle:font-size:1em
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  binding: css:.container
+  inspection: DeclaresStyle:max-width:1200px
