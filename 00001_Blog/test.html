@@ -3,12 +3,16 @@
   document.querySelector("h1").should.exist;
 })
 
-it("Se introdujeron dos títulos h2", () => {
-  document.querySelectorAll("h2").length.should.eq(2);
+it("El blog debe tener al menos dos subtitulos h2", () => {
+    document.getElementsByTagName("h2").length.should.be.greaterThanOrEqual(2);
 })
 
-it("Se introdujeron cuatro títulos h3", () => {
-  document.querySelectorAll("h3").length.should.eq(4);
+it("Se introdujeron al menos cuatro títulos h3", () => {
+  let cantidadDeSubtitulos = document.getElementsByTagName("h2").length;
+  
+  let cantidadDeApartados = document.getElementsByTagName("h3").length;
+  
+  cantidadDeApartados.should.be.greaterThanOrEqual(cantidadDeSubtitulos * 2);
 })
 
 it ("El título h1 tiene un tamaño de 1.5em",() => {
@@ -23,8 +27,12 @@ it("La tipografía de los párrafos es Recursive",() => {
   document.querySelector('p').should.have.style('font-family', 'Recursive')
 })
 
-it("Se introdujeron tres párrafos", () => {
-  document.querySelector('p').should.exist;
+it("El blog debe tener al menos un párrafo por cada apartado y un párrafo para la introducción", () => {
+  let cantidadDeApartados = document.getElementsByTagName("h3").length;
+  
+  let cantidadDeParrafos = document.getElementsByTagName("p").length;
+  
+  cantidadDeParrafos.should.be.greaterThanOrEqual(cantidadDeApartados + 1);
 })
 
 it("Los párrafos tienen un tamaño de 1.5em",() => {
